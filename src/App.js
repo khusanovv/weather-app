@@ -1,9 +1,9 @@
 import "./App.css";
 // import { useState } from "react"; 
-const api = {
-  key: "c4fb310c9d558e3592b116be9002b4a1",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
+// const api = {
+//   key: "c4fb310c9d558e3592b116be9002b4a1",
+//   base: "https://api.openweathermap.org/data/2.5/",
+// };
 
 function App() {
   // const [query, setQuery] = useState[""];
@@ -20,6 +20,18 @@ function App() {
   //       });
   //   }
   // };
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'f6049895d7mshab176a5e6b17120p158ad2jsnc6bf4bdc0821',
+  //     'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+  //   }
+  // };
+  
+  fetch('https://api.openweathermap.org/data/2.5/weather?lat={41.2213}&lon={69.8597}&appid={c4fb310c9d558e3592b116be9002b4a1}')
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
 
   const dateBuilder = (d) => {
     let months = [
